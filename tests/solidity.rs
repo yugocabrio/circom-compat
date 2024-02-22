@@ -2,7 +2,7 @@ use ark_circom::{ethereum, CircomBuilder, CircomConfig};
 use ark_std::rand::thread_rng;
 use color_eyre::Result;
 
-use ark_bn254::Bn254;
+use ark_bn254::{Bn254, Fr};
 use ark_crypto_primitives::snark::SNARK;
 use ark_groth16::Groth16;
 
@@ -16,7 +16,7 @@ use std::{convert::TryFrom, sync::Arc};
 
 #[tokio::test]
 async fn solidity_verifier() -> Result<()> {
-    let cfg = CircomConfig::<Bn254>::new(
+    let cfg = CircomConfig::<Fr>::new(
         "./test-vectors/mycircuit.wasm",
         "./test-vectors/mycircuit.r1cs",
     )?;
