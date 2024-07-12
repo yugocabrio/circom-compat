@@ -1,6 +1,5 @@
 use ark_ff::PrimeField;
 use std::{fs::File, path::Path};
-
 use super::{CircomCircuit, R1CS};
 
 use num_bigint::BigInt;
