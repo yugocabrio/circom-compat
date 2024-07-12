@@ -17,12 +17,13 @@ num-traits = { version = "=0.2.19", default-features = false }
 num-bigint = { version = "=0.4.3", default-features = false, features = ["rand"] }
 
 # ZKP Generation
-ark-crypto-primitives = { version = "=0.4.0" }
+ark-crypto-primitives = "0.4.0"
 
+# ark-ec = { version = "0.4.2", default-features = false }
 ark-ec = { version = "0.4.2", default-features = false }
 
-ark-ff = { version = "=0.4.2", default-features = false, features = ["parallel", "asm"] }
-# ark-ff= "0.4.2"
+# ark-ff = { version = "=0.4.2", default-features = false, features = ["parallel", "asm"], rev = "2a80c54"}
+ark-ff= "0.4.2"
 
 ark-std = { version = "=0.4.0", default-features = false, features = ["parallel"] }
 ark-bn254 = { version = "=0.4.0" }
@@ -30,14 +31,11 @@ ark-groth16 = { version = "=0.4.0", default-features = false, features = ["paral
 ark-poly = { version = "=0.4.2", default-features = false, features = ["parallel"] }
 # ark-poly = { git = "https://github.com/arkworks-rs/algebra/", rev = "2a80c54" }
 ark-relations = { version = "=0.4.0", default-features = false }
-ark-serialize = { version = "=0.4.2", default-features = false }
+ark-serialize = { version = "0.4.0", default-features = false }
 
 # decoding of data
 hex = "=0.4.3"
 byteorder = "=1.4.3"
-
-# ethereum compat
-ethers-core = { version = "=2.0.7", default-features = false, optional = true }
 
 # error handling
 thiserror = "=1.0.58"
@@ -50,15 +48,9 @@ cfg-if = "=1.0.0"
 hex-literal = "=0.2.2"
 tokio = { version = "=1.29.1", features = ["macros"] }
 serde_json = "=1.0.94"
-ethers = "=2.0.7"
-
-[[bench]]
-name = "groth16"
-harness = false
 
 [features]
-default = ["wasmer/default", "circom-2", "ethereum"]
+default = ["wasmer/default", "circom-2"]
 wasm = ["wasmer/js-default"]
 bench-complex-all = []
 circom-2 = []
-ethereum = ["ethers-core"]
