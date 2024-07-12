@@ -20,13 +20,13 @@ num-bigint = { version = "=0.4.3", default-features = false, features = ["rand"]
 ark-crypto-primitives = "0.4.0"
 
 # ark-ec = { version = "0.4.2", default-features = false }
-ark-ec = { version = "0.4.2", default-features = false }
+ark-ec = { version = "0.4.0", default-features = false }
 
 # ark-ff = { version = "=0.4.2", default-features = false, features = ["parallel", "asm"], rev = "2a80c54"}
 ark-ff= "0.4.2"
 
 ark-std = { version = "=0.4.0", default-features = false, features = ["parallel"] }
-ark-bn254 = { version = "=0.4.0" }
+ark-bn254 = { version = "0.4.0" }
 ark-poly = { version = "=0.4.2", default-features = false, features = ["parallel"] }
 # ark-poly = { git = "https://github.com/arkworks-rs/algebra/", rev = "2a80c54" }
 ark-relations = { version = "=0.4.0", default-features = false }
