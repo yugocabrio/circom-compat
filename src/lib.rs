@@ -5,4 +5,4 @@ mod witness;
 pub use witness::WitnessCalculator;
 
 pub mod circom;
-pub use circom::{CircomBuilder, CircomCircuit, CircomConfig, CircomReduction};
+pub use circom::{CircomBuilder, CircomCircuit, CircomConfig};

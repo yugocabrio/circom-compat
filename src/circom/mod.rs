@@ -7,8 +7,5 @@ pub use circuit::CircomCircuit;
 mod builder;
 pub use builder::{CircomBuilder, CircomConfig};
 
-mod qap;
-pub use qap::CircomReduction;
-
 pub type Constraints<F> = (ConstraintVec<F>, ConstraintVec<F>, ConstraintVec<F>);
 pub type ConstraintVec<F> = Vec<(usize, F)>;
